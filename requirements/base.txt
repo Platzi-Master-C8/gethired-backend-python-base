@@ -1,0 +1,6 @@
+pydantic
+uvicorn
+fastapi
+pytest
+sqlalchemy
+mypy

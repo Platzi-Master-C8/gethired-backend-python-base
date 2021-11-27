@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: ./compose/production/Dockerfile
+        volumes:
+            - .:/app
+
+    nginx:
+        build:
+            context: .
+            dockerfile: ./compose/nginx/Dockerfile
+        restart: always
+        ports:
+            - 80:80
+        links:
+            - app:app
+        depends_on:
+            - app
