@@ -1,6 +1,7 @@
-pydantic
-uvicorn
-fastapi
-pytest
-sqlalchemy
-mypy
+pydantic==1.8.2
+uvicorn==0.15.0
+fastapi==0.70.0
+pytest==6.2.5
+sqlalchemy==1.4.27
+mypy==0.910
+environ

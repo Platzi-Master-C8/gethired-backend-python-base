@@ -3,6 +3,9 @@
 # Fast API
 from fastapi import FastAPI
 
+# Application
+from app.demo.routes import home_router
+
 
 def get_application():
     """
@@ -11,6 +14,7 @@ def get_application():
     :return app: FastAPI -> Fast api application
     """
     app: FastAPI = FastAPI()
+    app.include_router(home_router)
     return app
 
 
